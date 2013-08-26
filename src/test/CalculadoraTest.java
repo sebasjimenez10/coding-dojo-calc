@@ -24,4 +24,21 @@ public class CalculadoraTest {
 		
 	}
 	
+	@Test
+	public void realizarOperacion2() {
+		
+		//ARRANGE
+		int operando1 = 10;
+		int operando2 = 3;
+		String operador = "+";
+		Calculadora calc = new Calculadora();
+		
+		//ACT
+		int resultado = calc.realizarOperacion(operando1, operando2, operador);
+		
+		//ASSERT
+		Assert.assertTrue( resultado == 13 );
+		
+	}
+	
 }
