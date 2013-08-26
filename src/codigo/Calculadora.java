@@ -6,8 +6,10 @@ public class Calculadora {
 		//Escribir el minimo codigo posible para que la prueba pase.
 		if( operador.equals("+") ){
 			return operando1 + operando2;
-		}else{
+		}else if ( operador.equals("-") ){
 			return operando1 - operando2;
+		}else{
+			return operando1 / operando2;
 		}
 	}
 
