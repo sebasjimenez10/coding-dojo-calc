@@ -75,4 +75,21 @@ public class CalculadoraTest {
 		
 	}
 	
+	@Test
+	public void realizarOperacion5() {
+		
+		//ARRANGE
+		int operando1 = 20;
+		int operando2 = 4;
+		String operador = "*";
+		Calculadora calc = new Calculadora();
+		
+		//ACT
+		int resultado = calc.realizarOperacion(operando1, operando2, operador);
+		
+		//ASSERT
+		Assert.assertTrue( resultado == 80 );
+		
+	}
+	
 }
