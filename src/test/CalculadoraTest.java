@@ -10,86 +10,97 @@ public class CalculadoraTest {
 	@Test
 	public void realizarOperacion1() {
 		
-		//ARRANGE
 		int operando1 = 5;
 		int operando2 = 1;
 		String operador = "+";
 		Calculadora calc = new Calculadora();
+		int resultado = 6;
 		
-		//ACT
-		int resultado = calc.realizarOperacion(operando1, operando2, operador);
-		
-		//ASSERT
-		Assert.assertTrue( resultado == 6 );
+		realizarOperacion(operando1, operando2, operador, resultado);
 		
 	}
 	
 	@Test
-	public void realizarOperacion2() {
+	public void realizarOperacion2(){
 		
-		//ARRANGE
-		int operando1 = 10;
+		int operando1 = 1;
+		int operando2 = 2;
+		String operador = "+";
+		int resultado = 3;
+		
+		realizarOperacion(operando1, operando2, operador, resultado);
+	}
+
+	@Test
+	public void realizarOperacion3(){
+		
+		int operando1 = 187;
 		int operando2 = 3;
 		String operador = "+";
-		Calculadora calc = new Calculadora();
+		int resultado = 190;
 		
-		//ACT
-		int resultado = calc.realizarOperacion(operando1, operando2, operador);
-		
-		//ASSERT
-		Assert.assertTrue( resultado == 13 );
+		realizarOperacion(operando1, operando2, operador, resultado);
 		
 	}
 	
 	@Test
-	public void realizarOperacion3() {
+	public void realizarOperacion4(){
 		
-		//ARRANGE
 		int operando1 = 5;
+		int operando2 = 1;
+		String operador = "-";
+		int resultado = 4;
+		
+		realizarOperacion(operando1, operando2, operador, resultado);
+		
+	}
+	
+	@Test
+	public void realizarOperacion5(){
+
+		int operando1 = 10;
 		int operando2 = 3;
 		String operador = "-";
-		Calculadora calc = new Calculadora();
+		int resultado = 7;
 		
-		//ACT
-		int resultado = calc.realizarOperacion(operando1, operando2, operador);
-		
-		//ASSERT
-		Assert.assertTrue( resultado == 2 );
-		
+		realizarOperacion(operando1, operando2, operador, resultado);
 	}
 	
 	@Test
-	public void realizarOperacion4() {
-		
-		//ARRANGE
-		int operando1 = 20;
-		int operando2 = 4;
+	public void realizarOperacion6(){
+
+		int operando1 = 10;
+		int operando2 = 2;
 		String operador = "/";
-		Calculadora calc = new Calculadora();
+		int resultado = 5;
 		
-		//ACT
-		int resultado = calc.realizarOperacion(operando1, operando2, operador);
-		
-		//ASSERT
-		Assert.assertTrue( resultado == 5 );
+		realizarOperacion(operando1, operando2, operador, resultado);
 		
 	}
 	
 	@Test
-	public void realizarOperacion5() {
+	public void realizarOperacion7(){
 		
-		//ARRANGE
-		int operando1 = 20;
-		int operando2 = 4;
+		int operando1 = 4;
+		int operando2 = 9;
 		String operador = "*";
+		int resultado = 36;
+		
+		realizarOperacion(operando1, operando2, operador, resultado);
+		
+	}
+	
+	private void realizarOperacion(int operando1, int operando2,
+			String operador, int resultadoEsperado){
+		
+		//Arrange
 		Calculadora calc = new Calculadora();
 		
-		//ACT
+		//Act
 		int resultado = calc.realizarOperacion(operando1, operando2, operador);
 		
-		//ASSERT
-		Assert.assertTrue( resultado == 80 );
-		
+		//Assert
+		Assert.assertEquals(resultado, resultadoEsperado);
 	}
 	
 }
