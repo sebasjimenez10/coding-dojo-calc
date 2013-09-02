@@ -13,7 +13,6 @@ public class CalculadoraTest {
 		int operando1 = 5;
 		int operando2 = 1;
 		String operador = "+";
-		Calculadora calc = new Calculadora();
 		int resultado = 6;
 		
 		realizarOperacion(operando1, operando2, operador, resultado);
